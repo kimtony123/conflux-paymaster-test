@@ -1,0 +1,568 @@
+:root {
+  --primary: #00b59b;
+  --primary-dark: #009e8a;
+  --bg: #0d1117;
+  --bg-secondary: #161b22;
+  --text: #e6edf3;
+  --text-secondary: #8b949e;
+  --border: #30363d;
+  --error: #f85149;
+  --success: #3fb950;
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --bg: #f6f8fa;
+  --bg-secondary: #ffffff;
+  --text: #1f2328;
+  --text-secondary: #656d76;
+  --border: #d0d7de;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  transition: background 0.3s, color 0.3s;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.page {
+  padding: 1rem 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-brand a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text);
+  background: var(--border);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-theme,
+.btn-logout {
+  padding: 0.5rem 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.btn-theme:hover,
+.btn-logout:hover {
+  background: var(--border);
+}
+
+/* Footer */
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 2rem 1rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-brand a {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.footer-brand p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.footer-section h4 {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+
+.footer-section a {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+
+.footer-section a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer-bottom p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+/* Home Page */
+.home-page .hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.home-page h1 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.home-page .subtitle {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.home-page .description {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.feature {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.feature .icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.feature h3 {
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.feature p {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.cta {
+  text-align: center;
+}
+
+/* Login Page */
+.login-page .back-link {
+  display: inline-block;
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: var(--text-secondary);
+}
+
+.wallets {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.wallet-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.wallet-option:hover:not(:disabled) {
+  border-color: var(--primary);
+}
+
+.wallet-option:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.wallet-icon {
+  font-size: 1.5rem;
+}
+
+.wallet-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.coming-soon {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.divider {
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--text-secondary);
+}
+
+.guest-text {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.guest-link {
+  color: var(--primary);
+  margin-left: 0.5rem;
+}
+
+/* Transfer Page */
+.transfer-page .not-connected {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+}
+
+/* Account Cards */
+.account-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.account-card.smart-account {
+  border-color: var(--primary);
+}
+
+.account-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.account-card .card-header h3 {
+  font-size: 1rem;
+}
+
+.account-card .address {
+  font-family: monospace;
+  font-size: 0.8rem;
+  word-break: break-all;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.account-card .address.small {
+  font-size: 0.7rem;
+}
+
+.account-card .hint {
+  font-size: 0.75rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.account-card .balances {
+  display: flex;
+  gap: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.account-card .balance {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.account-card .balance span:first-child {
+  color: var(--text-secondary);
+}
+
+.account-card .balance .amount {
+  font-weight: 600;
+}
+
+.account-card.eoa-account {
+  opacity: 0.7;
+}
+
+/* Transfer Form */
+.transfer-form {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.transfer-form h2 {
+  margin-bottom: 0.5rem;
+}
+
+.transfer-form .hint {
+  color: var(--primary);
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+/* Token Selector */
+.token-selector {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.token-selector button {
+  flex: 1;
+  padding: 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.token-selector button.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: monospace;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Buttons */
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-copy {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.btn-copy:hover {
+  background: var(--primary-dark);
+}
+
+.btn-send {
+  width: 100%;
+  padding: 1rem;
+  background: var(--success);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn-send:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn-send:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Status & Error */
+.error {
+  color: var(--error);
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(248, 81, 73, 0.1);
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+.status {
+  color: var(--primary);
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(0, 181, 155, 0.1);
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+.success {
+  color: var(--success);
+}
+
+.install-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* Result */
+.result {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(63, 185, 80, 0.1);
+  border-radius: 8px;
+}
+
+.result a {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* Network Info */
+.network-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
