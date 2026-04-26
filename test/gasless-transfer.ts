@@ -28,7 +28,7 @@ async function main() {
   console.log("    ✅ Connected:", paymaster.getAddress());
 
   console.log("[2] Setting factory...");
-  await paymaster.setFactory(process.env.FACTORY_ADDRESS || "0x3d536eA50c323fFA2bc6b7DF0c1AE253f6144eAE");
+  await paymaster.setFactory(process.env.FACTORY_ADDRESS || "0x011497Bb8E0DEbBD3cde2408D75D0d3504d12E7e");
   console.log("    ✅ Factory set");
 
   console.log("[3] Sending 1 CFX (gasless)...");

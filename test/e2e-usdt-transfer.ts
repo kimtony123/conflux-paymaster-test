@@ -19,7 +19,7 @@ const TEST_CONFIG = {
   rpcUrl: process.env.RPC_URL || "https://evmtestnet.confluxrpc.com",
   chainId: parseInt(process.env.CHAIN_ID || "71"),
   paymasterAddress: process.env.PAYMASTER_ADDRESS || "0x0cDE16Cf1fD5Bf2536069Aec8a2eF0832A27577B",
-  factoryAddress: process.env.FACTORY_ADDRESS || "0x3d536eA50c323fFA2bc6b7DF0c1AE253f6144eAE",
+  factoryAddress: process.env.FACTORY_ADDRESS || "0x011497Bb8E0DEbBD3cde2408D75D0d3504d12E7e",
   signingServiceUrl: process.env.BACKEND_URL || "http://localhost:3001",
   entryPointAddress: process.env.ENTRY_POINT_ADDRESS || "0xcd3072F98c8f1Caef717dcA1f3A85d9Dc555ae8C",
   usdtTokenAddress: process.env.USDT_TOKEN_ADDRESS || "0x4d1beB67e8f0102d5c983c26FDf0b7C6FFF37a0c",
